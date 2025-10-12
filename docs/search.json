@@ -26,7 +26,11 @@
     "href": "aindex.html#hadc-is-the-harper-adams-data-club",
     "title": "Welcome",
     "section": "HADC! is the Harper Adams Data Club",
-    "text": "HADC! is the Harper Adams Data Club\nThis site is devoted to the R programming, Statistics and Data Science communities at Harper Adams University. Our meetings are a mix of live coding, tutorials, and group problem solving. We are a friendly and enthusiastic group of students and staff from a variety of disciplines.\n\nWe meet weekly, currently on Tuesdays at 4pm UK time on Teams\nJoin our Discord server (please join with your full real name, e.g. “Florence Nightingale”).\n Youtube channel TheStatisticsLab"
+    "text": "HADC! is the Harper Adams Data Club\nThis site is devoted to the R programming, Statistics and Data Science communities at Harper Adams University. Our meetings are a mix of live coding, tutorials, and group problem solving. We are a friendly and enthusiastic group of students and staff from a variety of disciplines.\n\nWe meet weekly, currently on Tuesdays at 4pm UK time on Teams\nJoin our Discord server (please join with your full real name, e.g. “Florence Nightingale”).\n Youtube channel TheStatisticsLab",
+    "crumbs": [
+      "HADC!",
+      "Welcome"
+    ]
   },
   {
     "objectID": "hadc_links.html",
