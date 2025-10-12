@@ -1,5 +1,5 @@
 ---
-title: "Schedule"
+title: "Schedule "
 ---
 
 ![](img/pop-fisher-500x500.png){width="200"}
