@@ -1,32 +1,10 @@
 [
   {
-    "objectID": "index.html#hadc-is-the-harper-adams-data-club",
-    "href": "index.html#hadc-is-the-harper-adams-data-club",
-    "title": "Welcome",
-    "section": "HADC! is the Harper Adams Data Club",
-    "text": "HADC! is the Harper Adams Data Club\nThis site is devoted to the R programming, Statistics and Data Science communities at Harper Adams University. Our meetings are a mix of live coding, tutorials, and group problem solving. We are a friendly and enthusiastic group of students and staff from a variety of disciplines.\n\nWe meet weekly, currently on Tuesdays at 4pm UK time on Teams\nJoin our Discord server (please join with your full real name, e.g. “Florence Nightingale”).\n Youtube channel TheStatisticsLab",
-    "crumbs": [
-      "HADC!",
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "hadc_links.html",
-    "href": "hadc_links.html",
-    "title": "Links",
-    "section": "",
-    "text": "Resources: (R Stats Bootcamp)\nOld websites: (2022-2025 HARUG! website)\n(~2021 HARUG! website)\n\n\n\n Back to top",
-    "crumbs": [
-      "HADC!",
-      "Links"
-    ]
-  },
-  {
     "objectID": "hadc_schedule.html#the-future",
     "href": "hadc_schedule.html#the-future",
     "title": "Schedule",
     "section": "The Future",
-    "text": "The Future\n2025-10-21 (Meeting #190) - The use of AI to analyse your data, the promise and the pitfalls (Ed H) 2025-10-28 (Meeting #191) - How and why to publish your first data set (Ed H) 2025-11-04 (Meeting #192) - TBC (Volunteer welcome)",
+    "text": "The Future\n2025-10-21 (Meeting #190) - The use of AI to analyse your data, the promise and the pitfalls (Ed H)\n2025-10-28 (Meeting #191) - How and why to publish your first data set (Ed H)\n2025-11-04 (Meeting #192) - TBC (Volunteer welcome)",
     "crumbs": [
       "HADC!",
       "Schedule"
@@ -41,6 +19,24 @@
     "crumbs": [
       "HADC!",
       "Schedule"
+    ]
+  },
+  {
+    "objectID": "aindex.html#hadc-is-the-harper-adams-data-club",
+    "href": "aindex.html#hadc-is-the-harper-adams-data-club",
+    "title": "Welcome",
+    "section": "HADC! is the Harper Adams Data Club",
+    "text": "HADC! is the Harper Adams Data Club\nThis site is devoted to the R programming, Statistics and Data Science communities at Harper Adams University. Our meetings are a mix of live coding, tutorials, and group problem solving. We are a friendly and enthusiastic group of students and staff from a variety of disciplines.\n\nWe meet weekly, currently on Tuesdays at 4pm UK time on Teams\nJoin our Discord server (please join with your full real name, e.g. “Florence Nightingale”).\n Youtube channel TheStatisticsLab"
+  },
+  {
+    "objectID": "hadc_links.html",
+    "href": "hadc_links.html",
+    "title": "Links",
+    "section": "",
+    "text": "Resources:\nR Stats Bootcamp\nOld websites:\nHARUG! website (2022-2025)\nHARUG! website (2019-2021)\n\n\n\n Back to top",
+    "crumbs": [
+      "HADC!",
+      "Links"
     ]
   }
 ]

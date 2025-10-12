@@ -9,10 +9,12 @@ title: "Links"
 </center>
 
 Resources:
-[(R Stats Bootcamp)](https://rstatsbootcamp.com/)
+
+[R Stats Bootcamp](https://rstatsbootcamp.com/)
 
 
 Old websites:
-[(2022-2025 HARUG! website)](https://ha-data-science.github.io/pages/harug.html)
 
-[(~2021 HARUG! website)](https://ha-data-science.github.io/pages/harug.html)
+[HARUG! website (2022-2025)](https://ha-data-science.github.io/pages/harug.html)
+
+[HARUG! website (2019-2021)](https://ha-data-science.github.io/pages/harug.html)
