@@ -16,7 +16,7 @@ This site is devoted to the R programming, Statistics and Data Science community
 
 * Join our [Discord server](https://discord.gg/QqHhD7S7vU) (please join with your full real name, e.g. "Florence Nightingale").
 
-* ![](img/youtube.png){width="35"} [Youtube channel TheStatisticsLab](https://www.youtube.com/@thestatisticslab)
+* ![](img/youtube.svg){width="35"} [Youtube channel TheStatisticsLab](https://www.youtube.com/@thestatisticslab)
 
 
 

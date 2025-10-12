@@ -7,7 +7,7 @@ website:
   favicon: "img/HADC_2025_tp.png"
   title: "Harper Data Science"
   sidebar:
-    logo: "HADC_2025_tp.png"
+    logo: "img/HADC_2025_tp.png"
     style: "docked"
     search: true
     contents: 
