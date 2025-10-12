@@ -4,12 +4,12 @@ title: "Links "
 
 ![](img/pop-fisher-500x500.png){width="200"}
 
-Resources:
+## Resources
 
 [R Stats Bootcamp](https://rstatsbootcamp.com/)
 
 
-Old websites:
+## Old websites
 
 [HARUG! website (2022-2025)](https://ha-data-science.github.io/pages/harug.html)
 

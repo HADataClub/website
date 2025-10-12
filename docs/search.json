@@ -11,11 +11,22 @@
     ]
   },
   {
-    "objectID": "hadc_links.html",
-    "href": "hadc_links.html",
+    "objectID": "hadc_links.html#resources",
+    "href": "hadc_links.html#resources",
     "title": "Links",
-    "section": "",
-    "text": "Resources:\nR Stats Bootcamp\nOld websites:\nHARUG! website (2022-2025)\nHARUG! website (2019-2021)\n\n\n\n Back to top",
+    "section": "Resources",
+    "text": "Resources\nR Stats Bootcamp",
+    "crumbs": [
+      "HADC!",
+      "Links"
+    ]
+  },
+  {
+    "objectID": "hadc_links.html#old-websites",
+    "href": "hadc_links.html#old-websites",
+    "title": "Links",
+    "section": "Old websites",
+    "text": "Old websites\nHARUG! website (2022-2025)\nHARUG! website (2019-2021)",
     "crumbs": [
       "HADC!",
       "Links"
