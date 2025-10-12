@@ -8,6 +8,11 @@ title: "Links"
 
 </center>
 
-![](img/hex-pad2.png){width="200"}
+Resources:
+[(R Stats Bootcamp)](https://rstatsbootcamp.com/)
 
-[(old website)](https://ha-data-science.github.io/)
+
+Old websites:
+[(2022-2025 HARUG! website)](https://ha-data-science.github.io/pages/harug.html)
+
+[(~2021 HARUG! website)](https://ha-data-science.github.io/pages/harug.html)
