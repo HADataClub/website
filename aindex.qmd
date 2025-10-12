@@ -2,11 +2,9 @@
 title: "Welcome"
 ---
 
-<center>
 
 ![](img/pop-fisher-500x500.png){width="200"}
 
-</center>
 
 ## HADC! is the Harper Adams Data Club
 
