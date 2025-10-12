@@ -19,7 +19,7 @@ website:
       - section: "HADC!"
         contents:
           - text: "Welcome"
-            href: aindex.qmd
+            href: index.qmd
           - text: "Schedule"
             href: hadc_schedule.qmd
           - text: "Links"
