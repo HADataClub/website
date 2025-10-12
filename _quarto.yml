@@ -6,6 +6,11 @@ website:
   back-to-top-navigation: true
   favicon: "img/HADC_2025_tp.png"
   title: "Harper Data Science"
+
+  repo-url: https://github.com/HADataClub/website
+  repo-branch: master
+  repo-actions: [edit, issue]  
+  
   sidebar:
     logo: "img/HADC_2025_tp.png"
     style: "docked"
