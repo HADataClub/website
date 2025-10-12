@@ -10,7 +10,7 @@ title: "Welcome"
 
 ## HADC! is the Harper Adams Data Club
 
-This site is devoted to the R programming, Statistics and Data Science community at Harper Adams University. Our meetings are a mix of live coding, tutorials, and group problem solving. We are a friendly and enthusiastic group of students and staff from a variety of disciplines.
+This site is devoted to the R programming, Statistics and Data Science communities at Harper Adams University. Our meetings are a mix of live coding, tutorials, and group problem solving. We are a friendly and enthusiastic group of students and staff from a variety of disciplines.
 
 * We meet weekly, currently on Tuesdays at 4pm UK time on Teams
 
