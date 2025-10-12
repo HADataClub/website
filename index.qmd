@@ -12,7 +12,7 @@ This site is devoted to the R programming, Statistics and Data Science communiti
 
 * We meet weekly, currently on Tuesdays at 4pm UK time on Teams
 
-* Join our [Discord server](https://discord.gg/QqHhD7S7vU) (please join with your full real name, e.g. "Florence Nightingale").
+* [Join our Discord server](https://discord.gg/QqHhD7S7vU) (please join with your full real name, e.g. "Florence Nightingale").
 
 * ![](img/youtube.svg){width="35"} [Youtube channel TheStatisticsLab](https://www.youtube.com/@thestatisticslab)
 
