@@ -32,8 +32,11 @@ website:
         href: https://youtube.com/@TheStatisticsLab
         text: "YouTube"
       - icon: discord
-        href: https://discord.gg/dnNTE6xhhu
+        href: https://discord.gg/QqHhD7S7vU
         text: "Join our Discord"
+      - icon: x
+        href: https://x.com/EdHarris9000
+        text: "Ed's Twitter/X"
 
   twitter-card:
     creator: "@EdHarris9000"
