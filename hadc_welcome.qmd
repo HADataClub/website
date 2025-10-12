@@ -1,0 +1,22 @@
+---
+title: "Welcome"
+---
+
+<center>
+
+![](img/pop-fisher-500x500.png){width="200"}
+
+</center>
+
+## HADC! is the Harper Adams Data Club
+
+This site is devoted to the R programming, Statistics and Data Science community at Harper Adams University. Our meetings are a mix of live coding, tutorials, and group problem solving. We are a friendly and enthusiastic group of students and staff from a variety of disciplines.
+
+* We meet weekly, currently on Tuesdays at 4pm UK time on Teams
+
+* Join our [Discord server](https://discord.gg/QqHhD7S7vU) (please join with your full real name, e.g. "Florence Nightingale").
+
+* ![](img/youtube.png){width="35"} [Youtube channel TheStatisticsLab](https://www.youtube.com/@thestatisticslab)
+
+
+

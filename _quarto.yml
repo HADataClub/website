@@ -1,0 +1,53 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  back-to-top-navigation: true
+  favicon: "img/HADC_2025_tp.png"
+  title: "Harper Data Science"
+  sidebar:
+    logo: "HADC_2025_tp.png"
+    style: "docked"
+    search: true
+    contents: 
+      - section: "HADC!"
+        contents:
+          - text: "Welcome"
+            href: hadc_welcome.qmd
+          - text: "Schedule"
+            href: hadc_schedule.qmd
+          - text: "Links"
+            href: hadc_links.qmd
+    tools:
+      - icon: github
+        href: https://github.com/weharris
+        text: "Course GitHub repo"
+      - icon: youtube
+        href: https://youtube.com/@TheStatisticsLab
+        text: "YouTube"
+      - icon: discord
+        href: https://discord.gg/dnNTE6xhhu
+        text: "Join our Discord"
+
+  twitter-card:
+    creator: "@EdHarris9000"
+    image: "images/twitter-card.png"
+
+  page-footer:
+    left: "&copy; 2025 🐊 [W. Edwin Harris](https://weharris.me)"
+    center: "📊 [The Statistics Lab](https://thestatisticslab.com)"
+    right: "🚀 Built with [Quarto](https://quarto.org/)."
+    background: "#D9E3E4"
+
+format:
+  html:
+    highlight-style: a11y
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    toc: true
+
+editor: source
+
