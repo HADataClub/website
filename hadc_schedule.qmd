@@ -9,7 +9,7 @@ title: "Schedule "
 
 ## The Future
 
-2025-10-21 (Meeting #190) - The use of AI to analyse your data, the promise and the pitfalls (Ed H)
+2025-10-21 (Meeting #190) - Using AI to analyse your data, the promise and the pitfalls (Ed H)
 
 2025-10-28 (Meeting #191) - Publish your first data set: How and why (Ed H)
 
