@@ -11,7 +11,7 @@ format:
     number-sections: true
     code-fold: show
     code-tools: true
-    theme: cosmo
+    theme: lux
     embed-resources: true
   pdf:
     toc: true
