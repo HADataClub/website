@@ -24,7 +24,7 @@ execute:
   message: false
 ---
 
-# Executive Summary
+# Summary
 
 Provide a brief overview of the analysis objectives, key findings, and main conclusions. This section should be concise and accessible to non-technical stakeholders.
 
