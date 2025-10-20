@@ -26,40 +26,15 @@ execute:
 
 # Summary
 
-Provide a brief overview of the analysis objectives, key findings, and main conclusions. This section should be concise and accessible to non-technical stakeholders.
-
-**Key Findings:**
-
--   Finding 1
--   Finding 2
--   Finding 3
+Provide a brief overview of the analysis objectives, key findings, and main conclusions. This section should be concise and accessible to non-technical stakeholders. Max 1 paragraph, no bullet points
 
 # Introduction
 
-## Background
-
-Describe the context and motivation for the analysis. What problem are you trying to solve or what question are you trying to answer?
-
-## Objectives
-
-Clearly state the objectives of this analysis:
-
-1.  Objective 1
-2.  Objective 2
-3.  Objective 3
-
-## Research Questions
-
--   Research question 1?
--   Research question 2?
+Briefly describe the context and motivation for the analysis. What problem are you trying to solve or what question are you trying to answer?  List the main objectives of the analysis. Max 1 paragraph, no bullet points.
 
 # Data
 
-## Data Source
-
-Describe where the data comes from, how it was collected, and any relevant details about data provenance.
-
-## Data Description
+Describe where the data comes from, how it was collected, and any relevant details about data provenance. Max 1 paragraph (usually a few sentences unless the experimental design is described in detail), no bullet points.
 
 ```{r setup}
 #| label: setup
