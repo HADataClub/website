@@ -68,7 +68,6 @@ Describe where the data comes from, how it was collected, and any relevant detai
 # Load required packages
 library(tidyverse)
 library(knitr)
-library(kableExtra)
 
 # Set global options
 knitr::opts_chunk$set(
@@ -76,6 +75,11 @@ knitr::opts_chunk$set(
   fig.height = 6,
   fig.align = "center"
 )
+
+# Helper function for better table formatting
+format_table <- function(df, caption = NULL) {
+  knitr::kable(df, caption = caption, format = "simple", digits = 3)
+}
 ```
 
 ```{r load-data}
@@ -114,8 +118,7 @@ summary(data)
 
 # Display first few rows
 head(data) %>%
-  kable(caption = "Sample of the dataset") %>%
-  kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
+  kable(caption = "Sample of the dataset")
 ```
 
 ## Data Quality Assessment
@@ -131,8 +134,7 @@ missing_summary <- data %>%
   pivot_longer(everything(), names_to = "Variable", values_to = "Missing_Count")
 
 missing_summary %>%
-  kable(caption = "Missing values by variable") %>%
-  kable_styling(bootstrap_options = c("striped", "hover"))
+  kable(caption = "Missing values by variable")
 ```
 
 ### Data Cleaning Steps
@@ -217,8 +219,7 @@ cor_matrix <- cor(data[, sapply(data, is.numeric)])
 
 # Display correlation table
 cor_matrix %>%
-  kable(digits = 3, caption = "Correlation matrix") %>%
-  kable_styling(bootstrap_options = c("striped", "hover"))
+  kable(digits = 3, caption = "Correlation matrix")
 ```
 
 # Statistical Methods
@@ -286,8 +287,7 @@ plot(model)
 coef_table <- broom::tidy(model, conf.int = TRUE)
 
 coef_table %>%
-  kable(digits = 3, caption = "Model coefficients with 95% confidence intervals") %>%
-  kable_styling(bootstrap_options = c("striped", "hover"))
+  kable(digits = 3, caption = "Model coefficients with 95% confidence intervals")
 ```
 
 ### Interpretation
