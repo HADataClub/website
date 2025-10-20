@@ -23,13 +23,10 @@ str(mydata)
 mydata$my_factor_variable <- factor(mydata$my_factor_variable)
 mydata$my_numeric_variable <- as.numeric(mydata$my_numeric_variable)
 
-
 # 02 EDA ####
 # This here is my EDA
 # This will typically include bivariate plots of the response variable vs predictor variables, 
 # and maybe some multivariate plots of the data
 
-
 # 03 ANALYSIS ####
 # This here is my analysis
-
