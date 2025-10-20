@@ -1,0 +1,400 @@
+---
+title: "Statistical Analysis Report"
+subtitle: "Analysis Summary Template"
+author: "Ed Harris"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: right
+    number-sections: true
+    code-fold: show
+    code-tools: true
+    theme: lux
+    embed-resources: true
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+editor: visual
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+# Summary
+
+Provide a brief overview of the analysis objectives, key findings, and main conclusions. This section should be concise and accessible to non-technical stakeholders.
+
+**Key Findings:**
+
+-   Finding 1
+-   Finding 2
+-   Finding 3
+
+# Introduction
+
+## Background
+
+Describe the context and motivation for the analysis. What problem are you trying to solve or what question are you trying to answer?
+
+## Objectives
+
+Clearly state the objectives of this analysis:
+
+1.  Objective 1
+2.  Objective 2
+3.  Objective 3
+
+## Research Questions
+
+-   Research question 1?
+-   Research question 2?
+
+# Data
+
+## Data Source
+
+Describe where the data comes from, how it was collected, and any relevant details about data provenance.
+
+## Data Description
+
+```{r setup}
+#| label: setup
+#| include: false
+
+# Load required packages
+library(tidyverse)
+library(knitr)
+
+# Set global options
+knitr::opts_chunk$set(
+  fig.width = 8,
+  fig.height = 6,
+  fig.align = "center"
+)
+
+# Helper function for better table formatting
+format_table <- function(df, caption = NULL) {
+  knitr::kable(df, caption = caption, format = "simple", digits = 3)
+}
+```
+
+```{r load-data}
+#| label: load-data
+#| echo: true
+
+# Load your data
+# data <- read.csv("your_data.csv")
+
+# For demonstration, using built-in dataset
+data <- mtcars
+```
+
+### Data Structure
+
+```{r data-structure}
+#| label: data-structure
+
+# Display structure of the data
+str(data)
+```
+
+### Summary Statistics
+
+```{r summary-stats}
+#| label: summary-stats
+
+# Summary statistics
+summary(data)
+```
+
+### Sample of Data
+
+```{r data-sample}
+#| label: data-sample
+
+# Display first few rows
+head(data) %>%
+  kable(caption = "Sample of the dataset")
+```
+
+## Data Quality Assessment
+
+### Missing Values
+
+```{r missing-values}
+#| label: missing-values
+
+# Check for missing values
+missing_summary <- data %>%
+  summarise(across(everything(), ~sum(is.na(.)))) %>%
+  pivot_longer(everything(), names_to = "Variable", values_to = "Missing_Count")
+
+missing_summary %>%
+  kable(caption = "Missing values by variable")
+```
+
+### Data Cleaning Steps
+
+Describe any data cleaning, transformation, or preprocessing steps:
+
+1.  Step 1: Description
+2.  Step 2: Description
+
+```{r data-cleaning}
+#| label: data-cleaning
+
+# Example data cleaning
+# data_clean <- data %>%
+#   filter(!is.na(variable)) %>%
+#   mutate(new_variable = transformation)
+```
+
+# Exploratory Data Analysis
+
+## Univariate Analysis
+
+### Numerical Variables
+
+```{r univariate-numerical}
+#| label: univariate-numerical
+#| fig-cap: "Distribution of numerical variables"
+
+# Example: Histogram
+data %>%
+  ggplot(aes(x = mpg)) +
+  geom_histogram(bins = 20, fill = "steelblue", color = "white") +
+  labs(title = "Distribution of Miles per Gallon",
+       x = "MPG",
+       y = "Frequency") +
+  theme_minimal()
+```
+
+### Categorical Variables
+
+```{r univariate-categorical}
+#| label: univariate-categorical
+#| fig-cap: "Distribution of categorical variables"
+
+# Example: Bar plot
+data %>%
+  ggplot(aes(x = factor(cyl))) +
+  geom_bar(fill = "coral") +
+  labs(title = "Distribution of Cylinders",
+       x = "Number of Cylinders",
+       y = "Count") +
+  theme_minimal()
+```
+
+## Bivariate Analysis
+
+### Relationships Between Variables
+
+```{r bivariate-analysis}
+#| label: bivariate-analysis
+#| fig-cap: "Relationship between variables"
+
+# Example: Scatter plot
+data %>%
+  ggplot(aes(x = wt, y = mpg)) +
+  geom_point(size = 3, alpha = 0.6, color = "darkblue") +
+  geom_smooth(method = "lm", se = TRUE, color = "red") +
+  labs(title = "Relationship between Weight and MPG",
+       x = "Weight (1000 lbs)",
+       y = "Miles per Gallon") +
+  theme_minimal()
+```
+
+### Correlation Analysis
+
+```{r correlation}
+#| label: correlation
+#| fig-cap: "Correlation matrix"
+
+# Correlation matrix
+cor_matrix <- cor(data[, sapply(data, is.numeric)])
+
+# Display correlation table
+cor_matrix %>%
+  kable(digits = 3, caption = "Correlation matrix")
+```
+
+# Statistical Methods
+
+## Methodology
+
+Describe the statistical methods and techniques used in this analysis:
+
+-   Method 1: Description and justification
+-   Method 2: Description and justification
+
+## Assumptions
+
+List and verify any assumptions required for the statistical methods:
+
+1.  Assumption 1
+2.  Assumption 2
+
+### Checking Assumptions
+
+```{r check-assumptions}
+#| label: check-assumptions
+#| fig-cap: "Diagnostic plots"
+
+# Example: Check normality
+# qqnorm(data$variable)
+# qqline(data$variable)
+```
+
+# Results
+
+## Primary Analysis
+
+### Model Fitting
+
+```{r model-fitting}
+#| label: model-fitting
+
+# Example: Linear regression
+model <- lm(mpg ~ wt + hp + cyl, data = data)
+
+# Model summary
+summary(model)
+```
+
+### Model Diagnostics
+
+```{r model-diagnostics}
+#| label: model-diagnostics
+#| fig-cap: "Model diagnostic plots"
+#| fig-width: 10
+#| fig-height: 8
+
+# Diagnostic plots
+par(mfrow = c(2, 2))
+plot(model)
+```
+
+### Results Summary
+
+```{r results-table}
+#| label: results-table
+
+# Extract model coefficients
+coef_table <- broom::tidy(model, conf.int = TRUE)
+
+coef_table %>%
+  kable(digits = 3, caption = "Model coefficients with 95% confidence intervals")
+```
+
+### Interpretation
+
+Interpret the results in context:
+
+-   **Variable 1**: Interpretation
+-   **Variable 2**: Interpretation
+
+## Secondary Analyses
+
+### Additional Tests
+
+```{r additional-tests}
+#| label: additional-tests
+
+# Additional statistical tests
+# Example: ANOVA
+# anova_result <- aov(mpg ~ factor(cyl), data = data)
+# summary(anova_result)
+```
+
+### Subgroup Analysis
+
+If applicable, present any subgroup analyses:
+
+```{r subgroup-analysis}
+#| label: subgroup-analysis
+#| fig-cap: "Results by subgroup"
+
+# Example: Analysis by subgroup
+# data %>%
+#   group_by(subgroup) %>%
+#   summarise(mean_outcome = mean(outcome),
+#             sd_outcome = sd(outcome))
+```
+
+## Effect Sizes and Practical Significance
+
+Discuss the practical significance of findings, not just statistical significance:
+
+```{r effect-sizes}
+#| label: effect-sizes
+
+# Calculate effect sizes
+# Example: R-squared
+r_squared <- summary(model)$r.squared
+adj_r_squared <- summary(model)$adj.r.squared
+
+cat("R-squared:", round(r_squared, 3), "\n")
+cat("Adjusted R-squared:", round(adj_r_squared, 3), "\n")
+```
+
+# Discussion
+
+## Key Findings
+
+Summarize the main findings from the analysis:
+
+1.  Finding 1 with interpretation
+2.  Finding 2 with interpretation
+3.  Finding 3 with interpretation
+
+## Limitations
+
+Discuss any limitations of the analysis:
+
+-   Limitation 1
+-   Limitation 2
+-   Limitation 3
+
+## Implications
+
+What are the practical implications of these findings?
+
+## Future Directions
+
+Suggest areas for future research or analysis:
+
+-   Direction 1
+-   Direction 2
+
+# Conclusions
+
+Provide clear, concise conclusions based on the analysis. Address the original research questions and objectives.
+
+# References
+
+List any references or citations used in the analysis.
+
+# Appendix {.appendix}
+
+## Session Information
+
+```{r session-info}
+#| label: session-info
+
+sessionInfo()
+```
+
+## Additional Tables and Figures
+
+Include any supplementary materials here.
+
+```{r additional-analysis}
+#| label: additional-analysis
+#| eval: false
+
+# Additional code or analyses
+```
