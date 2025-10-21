@@ -10,7 +10,7 @@
 
 ### Data
 - wilt.csv is my data file
-- Data are a subset of the CIC dataset in the R package {agricolae} in case you need to cite it:
+- Data description: Data are a subset of the CIC dataset in the R package {agricolae} in case you need to cite it:
   Felipe de Mendiburu and Muhammad Yaseen(2020).  agricolae:
   Statistical Procedures for Agricultural Research.R package version 1.4.0, https://myaseen208.github.io/agricolae/https://cran.r-project.org/package=agricolae.
 - wilt_percent is the dependent var; there are only 2 values so it is binary
