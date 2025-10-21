@@ -10,4 +10,9 @@
 
 ### Data
 - wilt.csv is my data file
-- the dependent var is 
+- wilt_percent is the dependent var; there are only 2 values so it is binary
+- amendment and crop are factors - the explanatory variables of interest
+- block is a blocking factor
+
+### Instructions
+
