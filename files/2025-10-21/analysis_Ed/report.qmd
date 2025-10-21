@@ -62,26 +62,46 @@ format_table <- function(df, caption = NULL) {
 
 ```{r data}
 #| label: data
-#| echo: true
+#| echo: false
 
 # Load your data
-data <- read.csv("wilt.csv")
+wilt <- read.csv("wilt.csv")
+
+# convert to factor
+wilt$block <- factor(wilt$block)
+
+# This here creates a binary version of the wilt var
+wilt$wilt_bin <- wilt$wilt_percent
+wilt$wilt_bin[wilt$wilt_bin == 50] <- 1
 
 # Display structure of the data
-str(data)
+str(wilt)
 
 # Display first few rows
-head(data) %>%
+head(wilt) %>%
   kable(caption = "Dataset sample")
 ```
 
 # Statistical Analysis
 
-The statistical analysis consted of a linear mixed effects model with a binary dependent variable and a blocking factor treating block as a random effect. The model was fitted using the lme4 package in R.
+The statistical analysis consisted of a linear mixed effects model with a binary dependent variable and a blocking factor treating block as a random effect. The model was fitted using the lme4 package in R.
 
 # Results
 
-The results of the analysis are presented in table 1 nvz with the predictor names and the corresponding p-values, accompanied by a graph of the relationship between each predictor and the response variable.
+The results of the analysis are presented in table 1 with the predictor names and the corresponding p-values, accompanied by a graph of the relationship between each predictor and the response variable.
+
+```{r analysis}
+#| label: analysis
+#| echo: false
+
+lme1 <- glmer(wilt_bin ~ crop + amendment + (1|block), 
+            data = wilt,
+            family = binomial(link = "logit") )
+
+# print(lme1, corr=F)
+summary(lme1, corr=F)
+```
+
 
 # References
 
