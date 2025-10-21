@@ -14,7 +14,7 @@ format:
     theme: lux
     embed-resources: true
   pdf:
-    toc: true
+    toc: false
     number-sections: true
     colorlinks: true
 editor: visual
@@ -88,7 +88,7 @@ The statistical analysis consisted of a linear mixed effects model with a binary
 
 # Results
 
-The results of the analysis are presented in table 1 with the predictor names and the corresponding p-values, accompanied by a graph of the relationship between each predictor and the response variable.
+The results of the analysis are presented below with the predictor names and the corresponding p-values, accompanied by a graph of the relationship between each predictor and the response variable.
 
 ```{r analysis}
 #| label: analysis
@@ -99,13 +99,21 @@ lme1 <- glmer(wilt_bin ~ crop + amendment + (1|block),
             family = binomial(link = "logit") )
 
 # print(lme1, corr=F)
+
+print("Model Summary")
 summary(lme1, corr=F)
+
+plot_model(lme1, type = "pred", terms = c("crop"))
+
+plot_model(lme1, type = "pred", terms = c("amendment"))
+
 ```
 
 
 # References
 
-List any references or citations used in the analysis.
+Mendiburu, Felipe de and Yaseen, Muhammad(2020).  agricolae:
+  Statistical Procedures for Agricultural Research.R package version 1.4.0, https://myaseen208.github.io/agricolae/https://cran.r-project.org/package=agricolae.
 
 # Appendix {.appendix}
 
