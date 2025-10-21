@@ -36,8 +36,6 @@ This analysis is to demonstrate the use of Artificial Intelligence (AI) Large La
 
 The data are from a subset of the Chz2006 dataset in the R package {agricolae} (Mendiburu and Yaseen 2020). There are 3 factors of interest(crop, amendment, and block) and a binary dependent variable (wilt_percent). There is also a plant individual factor which we will not consider here. There are n = 1920 observations in the data. The data experimentally meassures the incidence and performance of healthy tubers and rotten potato field infested with naturally Ralstonia solanacearum Race 3/Bv 2A, after application of inorganic amendments and a rotation crop in Carhuaz Peru, 2006.
 
-
-
 ```{r setup}
 #| label: setup
 #| include: false
@@ -45,6 +43,9 @@ The data are from a subset of the Chz2006 dataset in the R package {agricolae} (
 # Load required packages
 library(tidyverse)
 library(knitr)
+library(lme4) # Statistician's preference
+library(lmerTest) # Calculates your p-vals in case CI is not good enough for you
+library(sjPlot)
 
 # Set global options
 knitr::opts_chunk$set(
@@ -76,11 +77,11 @@ head(data) %>%
 
 # Statistical Analysis
 
-The statistical analysis consted of a linear mixed effects model with a binary dependent variable and a blocking factor treating block as a random effect. The model was fitted using the lme4 package in R. 
+The statistical analysis consted of a linear mixed effects model with a binary dependent variable and a blocking factor treating block as a random effect. The model was fitted using the lme4 package in R.
 
 # Results
 
-The results of the analysis are presented in table 1  nvz with the predictor names and the corresponding p-values, accompanied by a graph of the relationship between each predictor and the response variable.
+The results of the analysis are presented in table 1 nvz with the predictor names and the corresponding p-values, accompanied by a graph of the relationship between each predictor and the response variable.
 
 # References
 
