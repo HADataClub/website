@@ -1,6 +1,6 @@
 # This here is the prompt file for my stats analysis project
 
-## Files
+## Files and templates
 - Use the following files:
     - script_template.R for a basic R analysis script template
     - report_template_brief.qmd for a Quarto-rendered report based on the analysis
