@@ -12,9 +12,6 @@
 - block is a blocking factor
 
 ### Instructions
-- Analyse my data using an appropriate statistical test
-- script.R should be based on script_template.R and should provide a basic analysis including inferential statistical results and appropriate graphs
-- report.qmd should be based on the template report_template_brief.qmd and contain a report-based version of the analysis in script.R, following the guidelines within report_tempalte_brief.qmd itself
-- The analysis need not be exhaustive, but should analyse the data mentioned in a single model, e.g. a multivariate linear model is better than several univariate models
+- Analyse my data using an appropriate statistical test producing R code
+_ I also want a summary of my results in report form with the results of statistical tests and appropriate graphs, along with very brief accounts of background and statistical methods in the analysis
 - Avoid extensive exploratory data analysis 
-- To account for the block factor and binary dependent variable, consider a mixed effects logistic model
