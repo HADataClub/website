@@ -26,7 +26,6 @@ names(wilt)
 table(wilt$wilt_percent)
 wilt$block <- factor(wilt$block)
 
-
 # This here creates a binary version of the wilt var
 wilt$wilt_bin <- wilt$wilt_percent
 wilt$wilt_bin[wilt$wilt_bin == 50] <- 1
@@ -59,8 +58,8 @@ lme1 <- glmer(wilt_bin ~ crop + amendment + (1|block),
             data = wilt,
             family = binomial(link = "logit") )
 
-print(lme1, corr=F)
-summary(lme1)
+# print(lme1, corr=F)
+summary(lme1, corr=F)
 
 se <- sqrt(diag(vcov(lme1)))
 # table of estimates with 95% CI
