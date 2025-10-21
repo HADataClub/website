@@ -15,4 +15,4 @@ title: "Schedule "
 
 ## Meeting materials
 
-[![](img/youtube.svg){width="25"}](https://youtu.be/1gemih_WVks) 2025-10-21 (Meeting #190) - Using AI to analyse your data, the promise and the pitfalls (Ed H) :: [files](https://github.com/HADataClub/website/tree/main/files/2025-10-21) :: [slides](https://github.com/HADataClub/website/blob/main/files/2025-10-21/HADC 2025-10-21.pdf)
+[![](img/youtube.svg){width="30"} video](https://youtu.be/1gemih_WVks) 2025-10-21 (Meeting #190) - Using AI to analyse your data, the promise and the pitfalls (Ed H) :: [files](https://github.com/HADataClub/website/tree/main/files/2025-10-21) :: [slides](https://github.com/HADataClub/website/blob/main/files/2025-10-21/HADC 2025-10-21.pdf)
