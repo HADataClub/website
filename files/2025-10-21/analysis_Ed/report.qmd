@@ -109,11 +109,9 @@ plot_model(lme1, type = "pred", terms = c("amendment"))
 
 ```
 
-
 # References
 
-Mendiburu, Felipe de and Yaseen, Muhammad(2020).  agricolae:
-  Statistical Procedures for Agricultural Research.R package version 1.4.0, https://myaseen208.github.io/agricolae/https://cran.r-project.org/package=agricolae.
+Mendiburu, Felipe de and Yaseen, Muhammad(2020). agricolae: Statistical Procedures for Agricultural Research.R package version 1.4.0, https://myaseen208.github.io/agricolae/https://cran.r-project.org/package=agricolae.
 
 # Appendix {.appendix}
 

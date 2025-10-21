@@ -29,6 +29,7 @@ wilt$block <- factor(wilt$block)
 # This here creates a binary version of the wilt var
 wilt$wilt_bin <- wilt$wilt_percent
 wilt$wilt_bin[wilt$wilt_bin == 50] <- 1
+table(wilt$wilt_bin)
 
 # 02 EDA ####
 
