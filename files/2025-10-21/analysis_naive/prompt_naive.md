@@ -12,6 +12,6 @@
 - block is a blocking factor
 
 ### Instructions
-- Analyse my data using an appropriate statistical test producing R code
-_ I also want a summary of my results in report form with the results of statistical tests and appropriate graphs, along with very brief accounts of background and statistical methods in the analysis
+- Analyse my data using an appropriate statistical test producing R code in a downloadable R file
+- I also want a summary of my results in report form with the results of statistical tests and appropriate graphs, along with very brief accounts of background and statistical methods in the analysis.  This can be something I can copy and paste or else a downloadable file.
 - Avoid extensive exploratory data analysis 
