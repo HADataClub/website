@@ -1,4 +1,0 @@
-# This here is the prompt files for my stats analysis project
-
-## Files
-- 
