@@ -1,11 +1,5 @@
 # This here is the prompt file for my stats analysis project
 
-## Files
-- Use the following files:
-    - script_template.R for a basic R analysis script template
-    - report_template_brief.qmd for a Quarto-rendered report based on the analysis
-    - guidelines.md for general instructions for you to strictly adhere to
-
 ## Specific instructions
 
 ### Data
@@ -13,7 +7,7 @@
 - Data are a subset of the CIC dataset in the R package {agricolae} in case you need to cite it:
   Felipe de Mendiburu and Muhammad Yaseen(2020).  agricolae:
   Statistical Procedures for Agricultural Research.R package version 1.4.0, https://myaseen208.github.io/agricolae/https://cran.r-project.org/package=agricolae.
-- wilt_percent is the dependent var; there are only 2 values so it is binary
+- wilt_percent is the dependent var
 - amendment and crop are factors - the explanatory variables of interest
 - block is a blocking factor
 
