@@ -5,30 +5,15 @@
 <script>
 (function () {
   const el = document.getElementById("viewcount");
-  const ns = "hadataclub.github.io"; // your namespace
-  // key per page; trims leading/trailing slash then replaces remaining with _ ; defaults to 'home'
-  const key = (location.pathname.replace(/^\/|\/$/g, '').replace(/\//g, '_')) || 'home';
+  const ns = "hadataclub.github.io"; // namespace for your site
+  // page-specific key: remove leading/trailing slashes, replace non-word chars with _
+  const key = (location.pathname.replace(/^\/|\/$/g, '').replace(/[^\w-]/g, '_')) || 'home';
 
-  const primary = `https://api.countapi.xyz/hit/${encodeURIComponent(ns)}/${encodeURIComponent(key)}`;
-  const fallback = `https://countapi.xyz/hit/${encodeURIComponent(ns)}/${encodeURIComponent(key)}`; // alt host if blocked
+  const url = `https://countapi.xyz/hit/${encodeURIComponent(ns)}/${encodeURIComponent(key)}`;
 
-  function update(url) {
-    console.log("CountAPI URL:", url);
-    return fetch(url, { cache: "no-store" })
-      .then(r => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json();
-      })
-      .then(d => { el.textContent = (d && d.value != null) ? d.value.toLocaleString() : "—"; });
-  }
-
-  update(primary).catch(err => {
-    console.error("Counter failed on primary host:", err);
-    // try fallback host once (helps when an extension blocks api.countapi.xyz)
-    return update(fallback).catch(err2 => {
-      console.error("Counter failed on fallback host too:", err2);
-      el.textContent = "—";
-    });
-  });
+  fetch(url, { cache: "no-store" })
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(d => { el.textContent = (d && d.value != null) ? d.value.toLocaleString() : "—"; })
+    .catch(() => { el.textContent = "—"; });
 })();
 </script>
