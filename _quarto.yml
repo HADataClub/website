@@ -56,6 +56,6 @@ format:
       dark: darkly
     css: styles.css
     toc: true
-
+    include-after-body: counter.html
 editor: source
 

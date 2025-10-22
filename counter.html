@@ -1,0 +1,20 @@
+<div style="text-align: center; margin-top: 1em; font-size: 0.9em;">
+    👁️ Page views: <span id="viewcount">...</span>
+  </div>
+  
+  <script>
+  (function () {
+    const ns = "YOUR_GITHUB_USERNAME.github.io";  // change this
+    const key = window.location.pathname.replace(/\//g, "_") || "home";
+    const url = `https://api.countapi.xyz/hit/${encodeURIComponent(ns)}/${encodeURIComponent(key)}`;
+    fetch(url)
+      .then(r => r.json())
+      .then(d => {
+        document.getElementById("viewcount").textContent = d.value.toLocaleString();
+      })
+      .catch(() => {
+        document.getElementById("viewcount").textContent = "—";
+      });
+  })();
+  </script>
+  
