@@ -9,10 +9,11 @@ title: "Schedule "
 
 ## The Future
 
-2025-10-28 (Meeting #191) - Publish your first data set: How and why (Ed H)
-
 2025-11-04 (Meeting #192) - Creating information with biodiversity data (Ed H)
 
 ## Meeting materials
 
 [![](img/youtube.svg){width="40"} video](https://youtu.be/1gemih_WVks) 2025-10-21 (Meeting #190) - Using AI to analyse your data, the promise and the pitfalls (Ed H) :: [files](https://github.com/HADataClub/website/tree/main/files/2025-10-21) :: [slides](https://github.com/HADataClub/website/blob/main/files/2025-10-21/HADC 2025-10-21.pdf)
+
+2025-10-28 (Meeting #191) - Publish your first data set: How and why (Ed H)
+

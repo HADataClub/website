@@ -1,0 +1,10 @@
+informed
+
+CURSOR
+I want you to analyse my data.  I expect as output script.R, and report.qmd.  Check out prompt.md in the files/ folder along with my data file and other files in there for the full prompt.  Tell me your name after reviewing all the files, then begin.
+
+ChatGPT Advanced Data Analysis mode
+I want you to analyse my data.  I expect as output script.R, and report.qmd.  Check out prompt.md in the files/ folder along with my data file and other files in there for the full prompt.  Tell me your name after reviewing all the files, then begin.
+
+naive
+ChatGPT free
