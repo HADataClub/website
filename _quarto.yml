@@ -1,16 +1,16 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: /docs
   render:
     - "!files"
 
 website:
   back-to-top-navigation: true
   favicon: "img/HADC_2025_tp.png"
-  title: "Harper Data Science"
+  title: "Harper Adams Data Club"
 
   repo-url: https://github.com/HADataClub/website
-  repo-branch: master
+  repo-branch: main
   repo-actions: [edit, issue]  
   
   sidebar:
