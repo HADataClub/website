@@ -2,11 +2,17 @@
 title: "Schedule "
 ---
 
+---
+title: "Schedule "
+---
+
+:::: {.columns}
+
+::: {.column width="40%"}
 ![](img/pop-fisher-500x500.png){width="200"}
+:::
 
-
-------------------------------------------------------------------------
-
+::: {.column width="60%"}
 ### The Future
 
 2025-11-04 (Meeting #192) - Creating information with biodiversity data (Ed H)
@@ -14,6 +20,11 @@ title: "Schedule "
 2025-11-11 (Meeting #193) - TBA (TBA)
 
 2025-11-18 (Meeting #194) - TBA (TBA)
+:::
+
+::::
+
+------------------------------------------------------------------------
 
 ### Meeting materials
 
