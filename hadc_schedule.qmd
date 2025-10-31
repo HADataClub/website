@@ -8,11 +8,11 @@ title: "Schedule "
 
 :::: {.columns}
 
-::: {.column width="40%"}
+::: {.column width="30%"}
 ![](img/pop-fisher-500x500.png){width="200"}
 :::
 
-::: {.column width="60%"}
+::: {.column width="70%"}
 ### The Future
 
 2025-11-04 (Meeting #192) - Creating information with biodiversity data (Ed H)
