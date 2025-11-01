@@ -1,10 +1,7 @@
 ---
-title: "Schedule "
+title: "Schedule"
 ---
 
----
-title: "Schedule "
----
 
 :::: {.columns}
 
