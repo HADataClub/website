@@ -40,10 +40,16 @@ By completing this section, participants will be able to:
 packages <- c("rgbif", "sf", "osmdata", "dplyr", "readr", "ggplot2")
 invisible(lapply(packages, \(p) if (!requireNamespace(p, quietly = TRUE)) install.packages(p)))
 lapply(packages, library, character.only = TRUE)
+# getwd()
+# setwd()
 dir.create("data/raw", recursive = TRUE, showWarnings = FALSE)
+```
 
 ## 4. Define Study Region: Shropshire Boundary (OSM)
+
+```r
 #| label: shropshire-boundary
+# ?osmdata :: opq
 shrop <- opq("Shropshire, England") |>
   add_osm_feature(key = "admin_level", value = "6") |>
   osmdata_sf()
@@ -55,15 +61,59 @@ shrop_poly <- shrop$osm_multipolygons |>
 
 wkt_shrop <- sf::st_as_text(sf::st_geometry(sf::st_union(shrop_poly)))
 
+
+## Alternative poly for Shropshire (simpler)
+## Rebuild a simpler WKT for Shropshire (fewer vertices)
+shrop_simple <- shrop_poly |>
+  sf::st_union() |>
+  sf::st_make_valid() |>
+  sf::st_simplify(dTolerance = 0.001, preserveTopology = TRUE) |>
+  sf::st_buffer(0) |>
+  sf::st_transform(4326)
+
+wkt_shrop_simple <- sf::st_as_text(sf::st_geometry(shrop_simple))
+
+
+```
+
+Make a function to "retry" incase of failure to download.  NB you can also download manually if you carefully document the download, but it is more reproducible to do so programmatically.
+
+```r
+gbif_search_retry <- function(..., tries = 5, base_wait = 1) {
+  for (i in seq_len(tries)) {
+    out <- try(rgbif::occ_search(...), silent = TRUE)
+    if (!inherits(out, "try-error") && !is.null(out$data)) return(out)
+    Sys.sleep(base_wait * (2^(i - 1)))
+  }
+  stop("GBIF occ_search failed after retries. Last error: ", attr(out,           "condition")$message %||% "unknown")
+}
+
+# Use year filter, simplified geometry, modest limit
+birds_sample <- gbif_search_retry(
+  taxonKey     = rgbif::name_backbone(name = "Aves")$usageKey,
+  geometry     = wkt_shrop_simple,
+  hasCoordinate= TRUE,
+  year         = "2000,2025",
+  limit        = 300
+)$data
+
+```
+
+
 ## 5. Plan the GBIF Query
-# Taxon: Aves
-# Spatial Filter: Shropshire county boundary
-# Temporal Filter: Records from 2000–present
-# Options: Only georeferenced records
-# Output: Record fields and license information
-# Citation: GBIF download DOI is automatically generated
+
+The Plan:
+
+- Taxon: Aves
+- Spatial Filter: Shropshire county boundary
+- Temporal Filter: Records from 2000–present
+- Options: Only georeferenced records
+- Output: Record fields and license information
+- Citation: GBIF download DOI is automatically generated
 
 ## 6. Quick Exploratory Import — rgbif::occ_search()
+
+```r
 #| label: gbif-sample
 birds_sample <- rgbif::occ_search(
   taxonKey = name_backbone(name = "Aves")$usageKey,
@@ -196,4 +246,6 @@ shrop_poly <- shrop$osm_multipolygons |>
 wkt_shrop <- st_as_text(st_geometry(st_union(shrop_poly)))
 bb <- st_bbox(st_union(shrop_poly))  # xmin, ymin, xmax, ymax
 ```
+
+
 
