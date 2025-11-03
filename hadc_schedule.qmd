@@ -12,9 +12,7 @@ title: "Schedule"
 ::: {.column width="70%"}
 ### The Future
 
-
-
-2025-11-11 (Meeting #193) - TBA (TBA)
+2025-11-11 (Meeting #193) - Introduction to "synthetic data" and its applications (Ed H)
 
 2025-11-18 (Meeting #194) - TBA (TBA)
 :::
