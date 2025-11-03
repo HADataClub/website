@@ -43,6 +43,17 @@ lapply(packages, library, character.only = TRUE)
 # getwd()
 # setwd()
 dir.create("data/raw", recursive = TRUE, showWarnings = FALSE)
+
+# Load GBIF username and password, etc.
+# NB this is the OLD way
+#
+# rgbif::gbif_login(
+#   user  = Sys.getenv("GBIF_USER"),
+#   pwd   = Sys.getenv("GBIF_PWD"),
+#   email = Sys.getenv("GBIF_EMAIL")
+# )
+
+
 ```
 
 ## 4. Define Study Region: Shropshire Boundary (OSM)
@@ -79,23 +90,23 @@ wkt_shrop_simple <- sf::st_as_text(sf::st_geometry(shrop_simple))
 Make a function to "retry" incase of failure to download.  NB you can also download manually if you carefully document the download, but it is more reproducible to do so programmatically.
 
 ```r
-gbif_search_retry <- function(..., tries = 5, base_wait = 1) {
-  for (i in seq_len(tries)) {
-    out <- try(rgbif::occ_search(...), silent = TRUE)
-    if (!inherits(out, "try-error") && !is.null(out$data)) return(out)
-    Sys.sleep(base_wait * (2^(i - 1)))
-  }
-  stop("GBIF occ_search failed after retries. Last error: ", attr(out,           "condition")$message %||% "unknown")
-}
-
-# Use year filter, simplified geometry, modest limit
-birds_sample <- gbif_search_retry(
-  taxonKey     = rgbif::name_backbone(name = "Aves")$usageKey,
-  geometry     = wkt_shrop_simple,
-  hasCoordinate= TRUE,
-  year         = "2000,2025",
-  limit        = 300
-)$data
+# gbif_search_retry <- function(..., tries = 5, base_wait = 1) {
+#   for (i in seq_len(tries)) {
+#     out <- try(rgbif::occ_search(...), silent = TRUE)
+#     if (!inherits(out, "try-error") && !is.null(out$data)) return(out)
+#     Sys.sleep(base_wait * (2^(i - 1)))
+#   }
+#   stop("GBIF occ_search failed after retries. Last error: ", attr(out,           "condition")$message %||% "unknown")
+# }
+# 
+# # Use year filter, simplified geometry, modest limit
+# birds_sample <- gbif_search_retry(
+#   taxonKey     = rgbif::name_backbone(name = "Aves")$usageKey,
+#   geometry     = wkt_shrop_simple,
+#   hasCoordinate= TRUE,
+#   year         = "2000,2025",
+#   limit        = 300
+# )$data
 
 ```
 
@@ -117,7 +128,7 @@ The Plan:
 #| label: gbif-sample
 birds_sample <- rgbif::occ_search(
   taxonKey = name_backbone(name = "Aves")$usageKey,
-  geometry = wkt_shrop,
+  geometry = wkt_shrop_simple,
   hasCoordinate = TRUE,
   year = "2000,2025",
   limit = 300
