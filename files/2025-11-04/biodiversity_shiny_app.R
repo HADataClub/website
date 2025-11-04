@@ -1,5 +1,10 @@
 ## Info ####
 
+# Very roughly, Shropshire
+min_lon <- 52.3
+max_lon <- 53.1
+min_lat <- -3.1
+max_lat <- -1.9
 
 
 
@@ -18,7 +23,7 @@ search_occurrences <- function(bbox, clade) {
                      bbox["max_longitude"], " ", bbox["max_latitude"], ",", 
                      bbox["max_longitude"], " ", bbox["min_latitude"], ",", 
                      bbox["min_longitude"], " ", bbox["min_latitude"], "))"),
-    month = c(1:12), ###define months of the year
+    month = c(1:12), # define months of the year
     scientificName = clade,
     hasCoordinate = TRUE
   )
@@ -42,6 +47,7 @@ ui <- fluidPage(
     )
   )
 )
+
 # Define server logic
 server <- function(input, output) {
   # Render the leaflet map based on user's clade selection and polygon coordinates
