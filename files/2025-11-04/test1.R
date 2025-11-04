@@ -16,6 +16,9 @@ x<- occ_search(
                    bbox["max_longitude"], " ", bbox["min_latitude"], ",", 
                    bbox["min_longitude"], " ", bbox["min_latitude"], "))"),
   month = c(1:12), # define months of the year
+  year = 2025,
   scientificName = clade,
   hasCoordinate = TRUE
 )
+
+x$meta$count  # See how many records matched
