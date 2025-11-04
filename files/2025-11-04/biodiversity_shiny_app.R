@@ -15,7 +15,8 @@ require(shiny)
 require(rgbif)
 require(leaflet)
 
-# Define function to search for occurrences of  specified clades within a polygon (i.e, bounding box=bbox)
+# Define function to search for occurrences of 
+# specified clades within a polygon (i.e, bounding box=bbox)
 search_occurrences <- function(bbox, clade) {
   occ_search_result <- occ_search(
     geometry = paste("POLYGON((", bbox["min_longitude"], " ", bbox["min_latitude"], ",", 
@@ -40,10 +41,10 @@ ui <- fluidPage(
                   # First clade to be shown in the drop down box
                   selected = "Aves"), 
       # By default you will have the approximate borders of Shropshire
-      numericInput("min_longitude", "Minimum Longitude:", value = 52.3),
-      numericInput("max_longitude", "Maximum Longitude:", value = 53.1),
-      numericInput("min_latitude", "Minimum Latitude:", value = -3.1),
-      numericInput("max_latitude", "Maximum Latitude:", value = -1.9)
+      numericInput("min_longitude", "Minimum Longitude:", value = -3.1),
+      numericInput("max_longitude", "Maximum Longitude:", value = -1.9),
+      numericInput("min_latitude", "Minimum Latitude:", value = 52.3),
+      numericInput("max_latitude", "Maximum Latitude:", value = 53.1)
     ),
     mainPanel(
       leafletOutput("map")
@@ -79,7 +80,7 @@ server <- function(input, output) {
       setView(
         lng = mean(bbox[c("min_longitude", "max_longitude")]),
         lat = mean(bbox[c("min_latitude", "max_latitude")]),
-        zoom = 14
+        zoom = 8
       )
   })
 }
