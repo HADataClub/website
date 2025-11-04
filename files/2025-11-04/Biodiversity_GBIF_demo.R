@@ -89,12 +89,16 @@ test_shrop <- occ_search(
 )
 cat("Records in Shropshire box 2020-2024:", test_shrop$meta$count, "\n\n")
 
-## 4 Download real data ####
+## 5 Download real data ####
+# Download all birds (Aves) in Shropshire for 2024
 
-# Download with corrected predicates (using pred_and to combine)
+# Get the taxonKey for Aves (birds)
+aves_key <- name_backbone(name = "Aves")$usageKey
+cat("Aves taxonKey:", aves_key, "\n\n")
+
 download_key <- occ_download(
   pred_and(
-    pred("scientificName", "Troglodytes troglodytes"),  # Troglodytes troglodytes
+    pred("taxonKey", aves_key),  # All birds (Aves)
     pred("year", 2024),
     pred("hasCoordinate", TRUE),
     pred_within("POLYGON((-3.2 52.4, -2.3 52.4, -2.3 53.0, -3.2 53.0, -3.2 52.4))")
@@ -109,15 +113,18 @@ occ_download_wait(download_key)
 
 # Download the zip file and import the data
 zip_file <- occ_download_get(download_key, path = "data/raw")
-wren_data <- occ_download_import(zip_file)
+bird_data <- occ_download_import(zip_file)
 
 # Check what we got
 cat("\nDownload summary:\n")
-cat("Number of records:", nrow(wren_data), "\n")
-if(nrow(wren_data) > 0) {
-  cat("Columns:", ncol(wren_data), "\n")
+cat("Number of records:", nrow(bird_data), "\n")
+if(nrow(bird_data) > 0) {
+  cat("Columns:", ncol(bird_data), "\n")
+  cat("Unique species:", length(unique(bird_data$species)), "\n")
+  cat("\nSpecies counts:\n")
+  print(head(sort(table(bird_data$species), decreasing = TRUE), 10))
   cat("\nFirst few records:\n")
-  print(head(wren_data[, c("species", "decimalLatitude", "decimalLongitude", "year", "eventDate")]))
+  print(head(bird_data[, c("species", "decimalLatitude", "decimalLongitude", "year", "eventDate")]))
 } else {
   cat("No records found - try adjusting year or location parameters\n")
 }
