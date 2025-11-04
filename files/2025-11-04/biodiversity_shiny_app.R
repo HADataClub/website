@@ -24,9 +24,7 @@ search_occurrences <- function(county, clade) {
   # Map county names to GADM codes
   county_gadm <- c(
     "Shropshire" = "GBR.1.84.1_1",
-    "Cheshire" = "GBR.1.18.1_1",
-    "Staffordshire" = "GBR.1.85.1_1",
-    "Herefordshire" = "GBR.1.43.1_1"
+    "Cheshire" = "GBR.1.18.1_1"
   )
   
   # Map clade names to GBIF taxo# Test Staffordshire
