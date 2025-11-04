@@ -29,7 +29,11 @@ search_occurrences <- function(county, clade) {
     "Herefordshire" = "GBR.1.43.1_1"
   )
   
-  # Map clade names to GBIF taxon keys
+  # Map clade names to GBIF taxo# Test Staffordshire
+occ_search(gadmGid = "GBR.1.85.1_1", limit = 10)
+
+# Test Herefordshire  
+occ_search(gadmGid = "GBR.1.43.1_1", limit = 10) # n keys
   taxon_keys <- c(
     "Aves" = 212,           # Birds
     "Mammalia" = 359,       # Mammals
