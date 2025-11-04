@@ -40,10 +40,10 @@ ui <- fluidPage(
                   # First clade to be shown in the drop down box
                   selected = "Aves"), 
       # By default you will have the approximate borders of Shropshire
-      numericInput("min_longitude", "Minimum Longitude:", value = -9),
-      numericInput("max_longitude", "Maximum Longitude:", value = -6),
-      numericInput("min_latitude", "Minimum Latitude:", value = 36),
-      numericInput("max_latitude", "Maximum Latitude:", value = 42)
+      numericInput("min_longitude", "Minimum Longitude:", value = 52.3),
+      numericInput("max_longitude", "Maximum Longitude:", value = 53.1),
+      numericInput("min_latitude", "Minimum Latitude:", value = -3.1),
+      numericInput("max_latitude", "Maximum Latitude:", value = -1.9)
     ),
     mainPanel(
       leafletOutput("map")
