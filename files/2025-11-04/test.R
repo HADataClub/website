@@ -9,6 +9,9 @@
 ## 3 Shiny ui
 ## 4 Shiny server
 
+## 1 Setup ####
+library(rgbif)
+
 occ_search(scientificName = "Erithacus rubecula")
 occ_search(scientificName = "Erithacus rubecula",country = "GB")
 occ_search(scientificName = "Erithacus rubecula",country = "GB",year="2020,2025")
