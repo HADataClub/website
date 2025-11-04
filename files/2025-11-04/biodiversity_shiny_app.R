@@ -1,12 +1,13 @@
 ## Info ####
 
-# Very roughly, Shropshire
-min_lon <- 52.3
-max_lon <- 53.1
-min_lat <- -3.1
-max_lat <- -1.9
 
+## Contents ####
+## 1 Setup
+## 2 GBIF search function
+## 3 Shiny ui
+## 4 Shiny server
 
+## 1 Setup ####
 
 # Install packages
 # install.packages(c("shiny", "rgbif", "leaflet", dependencies=T))
@@ -14,6 +15,8 @@ max_lat <- -1.9
 require(shiny)
 require(rgbif)
 require(leaflet)
+
+## 2 GBIF search function ####
 
 # Define function to search for occurrences of 
 # specified clades within a polygon (i.e, bounding box=bbox)
@@ -30,7 +33,10 @@ search_occurrences <- function(bbox, clade) {
   )
   return(occ_search_result)
 }
-# Define user interface
+
+## 3 Shiny ui ####
+
+# Define Shiny user interface
 ui <- fluidPage(
   titlePanel("Species Occurrence"),
   sidebarLayout(
@@ -52,7 +58,9 @@ ui <- fluidPage(
   )
 )
 
-# Define server logic
+## 4 Shiny server ####
+
+# Define Shiny server
 server <- function(input, output) {
   # Render the leaflet map based on user's clade selection and polygon coordinates
   output$map <- renderLeaflet({
