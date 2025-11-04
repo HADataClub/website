@@ -1,3 +1,14 @@
+## Info ####
+## what: GBIF data demo for HADC!
+## when: 2025-11-04
+## Who: Ed H
+
+## Contents ####
+## 1 Setup
+## 2 GBIF search function
+## 3 Shiny ui
+## 4 Shiny server
+
 occ_search(scientificName = "Erithacus rubecula")
 occ_search(scientificName = "Erithacus rubecula",country = "GB")
 occ_search(scientificName = "Erithacus rubecula",country = "GB",year="2020,2025")

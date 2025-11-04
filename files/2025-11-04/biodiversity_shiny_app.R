@@ -1,5 +1,7 @@
 ## Info ####
-
+## what: Shiny GBIF demo for HADC!
+## when: 2025-11-04
+## Who: Ed H
 
 ## Contents ####
 ## 1 Setup
