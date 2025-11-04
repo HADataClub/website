@@ -21,12 +21,14 @@ require(leaflet)
 # Define function to search for occurrences of 
 # specified clades within a polygon (i.e, bounding box=bbox)
 search_occurrences <- function(county, clade) {
+  # Shropshire GADM code
+  gadm_code <- "GBR.1.84.1_1" # Shropshire GADM code
+  
   occ_search_result <- occ_search(
-    stateProvince = county,
-    country = "GB",
-    month = c(1:12),
+    gadmGid = gadm_code,
     scientificName = clade,
-    hasCoordinate = TRUE
+    hasCoordinate = TRUE,
+    limit = 500
   )
   return(occ_search_result)
 }
@@ -61,26 +63,30 @@ server <- function(input, output) {
     clade <- input$clade
     county <- input$county
     occ_search_result <- search_occurrences(county, clade)
-    if (is.null(occ_search_result$data)) {
-      return(leaflet() %>% addTiles() %>% setView(lng = 0, lat = 51.5, zoom = 10))
+    
+    map <- leaflet() %>% addTiles()
+    
+    if (!is.null(occ_search_result$data) && nrow(occ_search_result$data) > 0) {
+      map <- map %>%
+        addCircleMarkers(
+          data = occ_search_result$data,
+          lng = ~decimalLongitude,
+          lat = ~decimalLatitude,
+          popup = ~species,
+          radius = 5,
+          color = "blue",
+          fillOpacity = 0.7
+        ) %>%
+        setView(
+          lng = mean(occ_search_result$data$decimalLongitude, na.rm = TRUE),
+          lat = mean(occ_search_result$data$decimalLatitude, na.rm = TRUE),
+          zoom = 9
+        )
+    } else {
+      map <- map %>% setView(lng = -2.75, lat = 52.7, zoom = 9)
     }
     
-    leaflet() %>%
-      addTiles() %>%
-      addCircleMarkers(
-        data = occ_search_result$data,
-        lng = ~decimalLongitude,
-        lat = ~decimalLatitude,
-        popup = ~species,
-        radius = 5,
-        color = "blue",
-        fillOpacity = 0.7
-      ) %>%
-      setView(
-        lng = -2.75,
-        lat = 52.7,
-        zoom = 9
-      )
+    map
   })
 }
 #et voilà! You can run the application
