@@ -89,10 +89,12 @@ test_shrop <- occ_search(
 )
 cat("Records in Shropshire box 2020-2024:", test_shrop$meta$count, "\n\n")
 
+## 4 Download real data ####
+
 # Download with corrected predicates (using pred_and to combine)
 download_key <- occ_download(
   pred_and(
-    pred("taxonKey", 2490974),  # Troglodytes troglodytes
+    pred("scientificName", "Troglodytes troglodytes"),  # Troglodytes troglodytes
     pred("year", 2024),
     pred("hasCoordinate", TRUE),
     pred_within("POLYGON((-3.2 52.4, -2.3 52.4, -2.3 53.0, -3.2 53.0, -3.2 52.4))")
