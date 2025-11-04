@@ -21,12 +21,21 @@ require(leaflet)
 # Define function to search for occurrences of 
 # specified clades within a polygon (i.e, bounding box=bbox)
 search_occurrences <- function(county, clade) {
-  # Shropshire GADM code
-  gadm_code <- "GBR.1.84.1_1" # Shropshire GADM code
+  gadm_code <- "GBR.1.84.1_1"
+  
+  # Map clade names to GBIF taxon keys
+  taxon_keys <- c(
+    "Aves" = 212,           # Birds
+    "Mammalia" = 359,       # Mammals
+    "Insecta" = 216,        # Insects
+    "Amphibia" = 131,       # Amphibians
+    "Coleoptera" = 1470,    # Beetles
+    "Plantae" = 6           # Plants
+  )
   
   occ_search_result <- occ_search(
     gadmGid = gadm_code,
-    scientificName = clade,
+    taxonKey = taxon_keys[[clade]],
     hasCoordinate = TRUE,
     limit = 500
   )
