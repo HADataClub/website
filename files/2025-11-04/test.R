@@ -5,20 +5,32 @@
 
 ## Contents ####
 ## 1 Setup
-## 2 GBIF search function
-## 3 Shiny ui
-## 4 Shiny server
+## 2 Simple search
+## 3 Caveats
+## 4 
 
 ## 1 Setup ####
 library(rgbif)
+library(ggplot2)
 
-occ_search(scientificName = "Erithacus rubecula")
-occ_search(scientificName = "Erithacus rubecula",country = "GB")
-occ_search(scientificName = "Erithacus rubecula",country = "GB",year="2020,2025")
+# Setup also includes pondering questions like when, where and what data do you want
+
+## 2 Simple search ####
+
+# Simplest search: NB limit of 500 records
+occ_search(scientificName = "Troglodytes troglodytes") 
+
+# Country code argument
+occ_search(scientificName = "Erithacus rubecula", country = "GB")
+
+# NB weird year specification format - there are many more weirdnesses!
+occ_search(scientificName = "Erithacus rubecula", country = "GB", year="2020,2025")
 
 # look up a single occurrence record
 occ_get(key=5006738747) # not many reasons to do this but it exists
 
+
+## 3 Caveats ####
 year<-0
 for(i in 1:25){
   year[i] <- occ_count(year=i+1999)
