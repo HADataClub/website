@@ -1,5 +1,10 @@
+## Info ####
+
+
+
+
 # Install packages
-install.packages(c("shiny", "rgbif", "leaflet", dependencies=T))
+# install.packages(c("shiny", "rgbif", "leaflet", dependencies=T))
 # Load packages
 require(shiny)
 require(rgbif)
