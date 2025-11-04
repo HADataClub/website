@@ -12,7 +12,7 @@ title: "Schedule"
 ::: {.column width="70%"}
 ### The Future
 
-2025-11-11 (Meeting #193) - "Farmers don't care about fake data". [Introduction to "Synthetic Data" and its applications] (Ed H)
+2025-11-11 (Meeting #193) - "Farmers don't care about fake data". [Why you should care about "Synthetic Data" and its applications] (Ed H)
 
 2025-11-18 (Meeting #194) - What should be the sample size for your experiment? (Ed H)
 :::
