@@ -77,9 +77,9 @@ server <- function(input, output) {
         fillOpacity = 0.7
       ) %>%
       setView(
-        lng = mean(bbox[c("min_longitude", "max_longitude")]),
-        lat = mean(bbox[c("min_latitude", "max_latitude")]),
-        zoom = 8
+        lng = -2.75,
+        lat = 52.7,
+        zoom = 9
       )
   })
 }
