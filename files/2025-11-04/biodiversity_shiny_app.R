@@ -21,7 +21,13 @@ require(leaflet)
 # Define function to search for occurrences of 
 # specified clades within a polygon (i.e, bounding box=bbox)
 search_occurrences <- function(county, clade) {
-  gadm_code <- "GBR.1.84.1_1"
+  # Map county names to GADM codes
+  county_gadm <- c(
+    "Shropshire" = "GBR.1.84.1_1",
+    "Cheshire" = "GBR.1.18.1_1",
+    "Staffordshire" = "GBR.1.85.1_1",
+    "Herefordshire" = "GBR.1.43.1_1"
+  )
   
   # Map clade names to GBIF taxon keys
   taxon_keys <- c(
@@ -34,7 +40,7 @@ search_occurrences <- function(county, clade) {
   )
   
   occ_search_result <- occ_search(
-    gadmGid = gadm_code,
+    gadmGid = county_gadm[[county]],
     taxonKey = taxon_keys[[clade]],
     hasCoordinate = TRUE,
     limit = 500
@@ -54,8 +60,10 @@ ui <- fluidPage(
                   choices = c("Aves", "Coleoptera", "Amphibia", "Plantae", "Mammalia", "Insecta"),
                   # First clade to be shown in the drop down box
                   selected = "Aves"), 
-      # By default you will have the approximate borders of Shropshire
-      textInput("county", "Enter UK County:", value = "Shropshire")
+      # Choose from multiple counties
+      selectInput("county", "Choose a county:",
+                  choices = c("Shropshire", "Cheshire", "Staffordshire", "Herefordshire"),
+                  selected = "Shropshire")
     ),
     mainPanel(
       leafletOutput("map")
@@ -92,7 +100,15 @@ server <- function(input, output) {
           zoom = 9
         )
     } else {
-      map <- map %>% setView(lng = -2.75, lat = 52.7, zoom = 9)
+      # County center coordinates if no data
+      county_centers <- list(
+        "Shropshire" = c(-2.75, 52.7),
+        "Cheshire" = c(-2.5, 53.2),
+        "Staffordshire" = c(-2.0, 52.8),
+        "Herefordshire" = c(-2.7, 52.1)
+      )
+      center <- county_centers[[county]]
+      map <- map %>% setView(lng = center[1], lat = center[2], zoom = 9)
     }
     
     map
