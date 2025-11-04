@@ -7,7 +7,7 @@
 ## 1 Setup
 ## 2 Simple search
 ## 3 Caveats
-## 4 
+## 4 Download real data
 
 ## 1 Setup ####
 library(rgbif)
@@ -31,13 +31,19 @@ occ_get(key=5006738747) # not many reasons to do this but it exists
 
 
 ## 3 Caveats ####
-year<-0
+count <- 0
 for(i in 1:25){
-  year[i] <- occ_count(year=i+1999)
+  count[i] <- occ_count(year=i+1999)
 }
+mydat <- data.frame(year = 2000:2024, count)
 
-plot(2000:2024, log10(year),
-    # ylim = c(500000, 315000000),
-     type = 'b')
+ggplot(mydat, aes(x = year, y = log10(count))) +
+  geom_line() + 
+  geom_point() + 
+  ylab("Log10 Occurrence records") +
+  xlab("Year") +
+  theme_minimal()
+         
+
 
      
