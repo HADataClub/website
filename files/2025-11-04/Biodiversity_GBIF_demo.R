@@ -105,6 +105,17 @@ download_key <- occ_download(
 # Check download status
 occ_download_wait(download_key)
 
-# Import the data
-wren_data <- occ_download_get(download_key) %>%
-  occ_download_import()
+# Download the zip file and import the data
+zip_file <- occ_download_get(download_key, path = "data/raw")
+wren_data <- occ_download_import(zip_file)
+
+# Check what we got
+cat("\nDownload summary:\n")
+cat("Number of records:", nrow(wren_data), "\n")
+if(nrow(wren_data) > 0) {
+  cat("Columns:", ncol(wren_data), "\n")
+  cat("\nFirst few records:\n")
+  print(head(wren_data[, c("species", "decimalLatitude", "decimalLongitude", "year", "eventDate")]))
+} else {
+  cat("No records found - try adjusting year or location parameters\n")
+}
