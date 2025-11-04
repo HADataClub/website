@@ -64,7 +64,7 @@ ui <- fluidPage(
                   selected = "Aves"), 
       # Choose from multiple counties
       selectInput("county", "Choose a county:",
-                  choices = c("Shropshire", "Cheshire", "Staffordshire", "Herefordshire"),
+                  choices = c("Shropshire", "Cheshire"),
                   selected = "Shropshire")
     ),
     mainPanel(
@@ -86,6 +86,16 @@ server <- function(input, output) {
     map <- leaflet() %>% addTiles()
     
     if (!is.null(occ_search_result$data) && nrow(occ_search_result$data) > 0) {
+      # Define colors for each clade
+      clade_colors <- c(
+        "Aves" = "blue",
+        "Mammalia" = "red",
+        "Insecta" = "green",
+        "Amphibia" = "orange",
+        "Coleoptera" = "purple",
+        "Plantae" = "darkgreen"
+      )
+      
       map <- map %>%
         addCircleMarkers(
           data = occ_search_result$data,
@@ -93,7 +103,7 @@ server <- function(input, output) {
           lat = ~decimalLatitude,
           popup = ~species,
           radius = 5,
-          color = "blue",
+          color = clade_colors[[clade]],
           fillOpacity = 0.7
         ) %>%
         setView(
