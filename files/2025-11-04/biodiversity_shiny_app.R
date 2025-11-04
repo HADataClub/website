@@ -35,9 +35,12 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       selectInput("clade", "Choose a clade:",
-                  choices = c("Aves", "Coleoptera", "Amphibia", "Plantae", "Mammalia", "Actinopterygii", "Insecta"),#you can change the default clades according to your taste in biodiversity
-                  selected = "Aves"), #first clade to be shown in the drop down box
-      numericInput("min_longitude", "Minimum Longitude:", value = -9),##by default you will have the approximate borders of portugal, but this can be changed in the user interface or directly here
+                  # You can change the default choices according to your taste in biodiversity
+                  choices = c("Aves", "Coleoptera", "Amphibia", "Plantae", "Mammalia", "Insecta"),
+                  # First clade to be shown in the drop down box
+                  selected = "Aves"), 
+      # By default you will have the approximate borders of Shropshire
+      numericInput("min_longitude", "Minimum Longitude:", value = -9),
       numericInput("max_longitude", "Maximum Longitude:", value = -6),
       numericInput("min_latitude", "Minimum Latitude:", value = 36),
       numericInput("max_latitude", "Maximum Latitude:", value = 42)
