@@ -9,6 +9,7 @@
 require(shiny)
 require(rgbif)
 require(leaflet)
+
 # Define function to search for occurrences of  specified clades within a polygon (i.e, bounding box=bbox)
 search_occurrences <- function(bbox, clade) {
   occ_search_result <- occ_search(
@@ -17,7 +18,7 @@ search_occurrences <- function(bbox, clade) {
                      bbox["max_longitude"], " ", bbox["max_latitude"], ",", 
                      bbox["max_longitude"], " ", bbox["min_latitude"], ",", 
                      bbox["min_longitude"], " ", bbox["min_latitude"], "))"),
-    month = 1, 12,###define months of the year
+    month = c(1:12), ###define months of the year
     scientificName = clade,
     hasCoordinate = TRUE
   )
