@@ -23,7 +23,7 @@ title: "Schedule"
 
 ### Meeting materials
 
-[![](img/youtube.svg){width="40"} video]() 2025-11-04 (Meeting #192) - Creating information with biodiversity data (Ed H) :: [slides](https://github.com/HADataClub/website/blob/main/files/2025-11-04/HADC! 2025-11-03.pdf) :: [canva](https://www.canva.com/design/DAG3eIhD4lo/BBBLhHFgh_vxjPA3iJWT8g/edit?utm_content=DAG3eIhD4lo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+[![](img/youtube.svg){width="40"} video]() 2025-11-04 (Meeting #192) - Creating information with biodiversity data (Ed H) :: [slides](https://github.com/HADataClub/website/blob/main/files/2025-11-04/HADC! 2025-11-03.pdf) :: [canva](https://www.canva.com/design/DAG3eIhD4lo/BBBLhHFgh_vxjPA3iJWT8g/edit?utm_content=DAG3eIhD4lo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) :: [files](https://github.com/HADataClub/website/tree/main/files/2025-11-04)
 
 [![](img/youtube.svg){width="40"} video](https://youtu.be/7yOHMmjuiiA) 2025-10-28 (Meeting #191) - Publish your first data set: How and why (Ed H) :: [slides](https://github.com/HADataClub/website/blob/main/files/2025-10-28/HADC! 2025-10-28.pptx) :: [canva](https://www.canva.com/design/DAG2fzP7OVs/rE1ZzD94Z56G6_hlIyE_sA/edit?utm_content=DAG2fzP7OVs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
