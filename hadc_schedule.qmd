@@ -12,9 +12,17 @@ title: "Schedule"
 ::: {.column width="70%"}
 ### The Future
 
-2025-11-11 (Meeting #193) - "Farmers don't care about fake data". [Why you should care about "Synthetic Data" and its applications] (Ed H)
+2025-11-11 (Meeting #193) - Synthetic data for agriculture (Why Farmers should care about "fake data") (Ed H)
 
 2025-11-18 (Meeting #194) - What should be the sample size for your experiment? (Ed H)
+
+2025-11-25 (Meeting #195) - TBA (TBA)
+2025-12-02 (Meeting #196) - TBA (TBA)
+2025-12-09 (Meeting #197) - TBA (TBA)
+2025-12-16 (Meeting #198) - TBA (TBA)
+**Christmas Break**
+2026-01-13 ...
+
 :::
 
 ::::
