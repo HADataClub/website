@@ -33,12 +33,42 @@ codebook.syn(mydata)$tab
 # Check weird negative income values
 table(mydata$income[mydata$income < 0], useNA = "ifany")
 
+
+### quick tree viz ####
+# install.packages("randomForest")
+# install.packages("devtools")
+library(devtools)
+# install_github("araastat/reprtree")
+library(randomForest)
+library(reprtree)
+
+
+model <- randomForest(income ~ ., 
+                      data = mydata, 
+                      importance = TRUE, 
+                      ntree = 500, mtry = 2, 
+                      do.trace = 100,
+                      na.action = na.omit)
+
+reprtree:::plot.getTree(model) # ouch!
+
+mydata1 <- mydata[,c(1:3,10)] 
+
+model1 <- randomForest(income ~ ., 
+                       data = mydata1, 
+                       importance = TRUE, 
+                       ntree = 500, mtry = 2, 
+                       do.trace = 100,
+                       na.action = na.omit)
+
+reprtree:::plot.getTree(model1) # ouch!
+
 # We can see that income has both NA values and -8. 
 # We will ignore this for now
-mysyn <- syn(mydata)  
+mysyn <- syn(mydata, k=10000)  
 
 summary(mysyn)
-compare(mysyn, mydata, stat = "counts")
+compare(mysyn, mydata, stat = "percents")
 
 # 3 Synthetic data generation ####
 
@@ -51,3 +81,5 @@ compare(mysyn, mydata, stat = "counts")
 
 # Synthpop info
 # https://www.synthpop.org.uk/get-started.html
+
+# https://speeds.quarto.pub/speeds/Synthetic_Data_Generation_With_synthpop.html
