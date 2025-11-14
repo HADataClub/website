@@ -42,7 +42,7 @@ library(devtools)
 library(randomForest)
 library(reprtree)
 
-
+# Breiman Random Forest
 model <- randomForest(income ~ ., 
                       data = mydata, 
                       importance = TRUE, 
@@ -70,7 +70,7 @@ mysyn <- syn(mydata, k=10000)
 summary(mysyn)
 compare(mysyn, mydata, stat = "percents")
 
-# 3 Synthetic data generation ####
+# 3 Synthetic data generation ####--
 
 
 

@@ -12,8 +12,6 @@ title: "Schedule"
 ::: {.column width="70%"}
 ### The Future
 
-2025-11-18 (Meeting #194) - What should be the sample size for your experiment? (Ed H)
-
 2025-11-25 (Meeting #195) - TBA (TBA)
 
 2025-12-02 (Meeting #196) - TBA (TBA)
@@ -33,6 +31,8 @@ title: "Schedule"
 ------------------------------------------------------------------------
 
 ### Meeting materials
+
+[![](img/youtube.svg){width="40"} video]() 2025-11-18 (Meeting #194) - What should be the sample size for your experiment? [Of effect size and power] (Ed H) :: [canva](https://www.canva.com/design/DAG3z87baAQ/ai3B834_HX6Seo9j1fU3AQ/edit?utm_content=DAG3z87baAQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) :: [files](https://github.com/HADataClub/website/tree/main/files/2025-11-11)
 
 [![](img/youtube.svg){width="40"} video](https://youtu.be/HE9oNHGx-M4) 2025-11-11 (Meeting #193) - Synthetic data for agriculture (Why Farmers should care about "fake data") (Ed H) :: [canva](https://www.canva.com/design/DAG3z87baAQ/ai3B834_HX6Seo9j1fU3AQ/edit?utm_content=DAG3z87baAQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) :: [files](https://github.com/HADataClub/website/tree/main/files/2025-11-11)
 
