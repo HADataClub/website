@@ -12,7 +12,7 @@ title: "Schedule"
 ::: {.column width="70%"}
 ### The Future
 
-2025-11-25 (Meeting #195) - TBA (TBA)
+2025-11-25 (Meeting #195) - AI for statistics in R (TBA)
 
 2025-12-02 (Meeting #196) - TBA (TBA)
 
