@@ -12,9 +12,9 @@ title: "Schedule"
 ::: {.column width="70%"}
 ### The Future
 
-2025-11-25 (Meeting #195) - Statistical power and animal behaviour (TBA)
+2025-11-25 (Meeting #195) - Statistical power and animal behaviour (Ed H)
 
-2025-12-02 (Meeting #196) - AI for statistics in R (TBA)
+2025-12-02 (Meeting #196) - More AI for statistics in R (Ed H)
 
 2025-12-09 (Meeting #197) - TBA (TBA)
 
