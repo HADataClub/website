@@ -32,7 +32,7 @@ title: "Schedule"
 
 ### Meeting materials
 
-[![](img/youtube.svg){width="40"} video]() 2025-11-18 (Meeting #194) - What should be the sample size for your experiment? [Intro to effect size and power] (Ed H) :: [canva](https://www.canva.com/design/DAG3z87baAQ/ai3B834_HX6Seo9j1fU3AQ/edit?utm_content=DAG3z87baAQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) :: [files](https://github.com/HADataClub/website/tree/main/files/2025-11-18)
+[![](img/youtube.svg){width="40"} video]() 2025-11-18 (Meeting #194) - What should be the sample size for your experiment? [Intro to effect size and power] (Ed H) :: [canva](https://www.canva.com/design/DAG5DJ6nRpw/CmOeaWYnMQQpE8Obem0ZNw/edit?utm_content=DAG5DJ6nRpw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) :: [files](https://github.com/HADataClub/website/tree/main/files/2025-11-18)
 
 [![](img/youtube.svg){width="40"} video](https://youtu.be/HE9oNHGx-M4) 2025-11-11 (Meeting #193) - Synthetic data for agriculture (Why Farmers should care about "fake data") (Ed H) :: [canva](https://www.canva.com/design/DAG3z87baAQ/ai3B834_HX6Seo9j1fU3AQ/edit?utm_content=DAG3z87baAQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) :: [files](https://github.com/HADataClub/website/tree/main/files/2025-11-11)
 
