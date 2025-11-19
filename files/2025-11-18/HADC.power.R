@@ -38,7 +38,7 @@ pwr.2p.test(h=ES.h(0.5,0.40), power = 0.8, sig.level=0.05, alternative = "two.si
 pwr.2p.test(h=ES.h(0.5,0.40), power = 0.8, sig.level=0.05, alternative = "greater")
 
 ES.h(0.8, 0.65)
-pwr.p.test(h = ES.h(0.8, 0.65), n = NULL, power = 0.8, sig.level = 0.05) #69
+pwr.p.test(h = ES.h(0.8, 0.60), n = NULL, power = 0.8, sig.level = 0.05) #69
 pwr.p.test(h = ES.h(0.8, 0.65), n = 55, sig.level = 0.05)#0.71
 
 ## 03 1 and 2 sample t-test ####
@@ -52,7 +52,7 @@ pwr.t.test(d=0.2, n=60, sig.level=0.05,
 pwr.t.test(d=0.2, n=NULL, sig.level=0.05, power=0.80,
            type="one.sample",alternative="two.sided") #
 
-pwr.t.test(d=0.5, n=40, sig.level=0.05,
+pwr.t.test(d=0.2, n=40, sig.level=0.05,
            type="paired",alternative="two.sided") #good power
 
 pwr.t.test(d=(2/2.8), n=30, sig.level=0.05,
