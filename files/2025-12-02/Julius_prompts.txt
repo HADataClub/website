@@ -13,3 +13,7 @@ Remove columns that are irrelevant for a linear regression analysis
 
 Conduct a linear regression analysis with price as the dependent variable for prediction
 
+Create a ggplot2 scatterplot relating price and engine size; add a linear regression line
+
+Return one code box with relevant R code and explanatory comments for the entire project.  This should be suitable for me to copy and paste into RStudio.
+
