@@ -17,6 +17,7 @@ library(pwr)
 # From Bondi pp 224
 # Exploration time in Caracara
 # measured diff between M and F
+# We assume Fig1 Ad vs Juv is same as stork M versus F
 # n = 9F, 10M
 # M = 134 +- 44 (mean +- SE)
 # F = 108 +- 22
