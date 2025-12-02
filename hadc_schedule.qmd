@@ -28,7 +28,7 @@ title: "Schedule"
 
 ### Meeting materials
 
-[![](img/youtube.svg){width="40"} video]() 2025-12-02 (Meeting #196) - More AI for statistics in R (Ed H) :: [slides]() :: [car data](https://www.kaggle.com/datasets/hellbuoy/car-price-prediction) :: [files](https://github.com/HADataClub/website/tree/main/files/2025-12-02)
+[![](img/youtube.svg){width="40"} video]() 2025-12-02 (Meeting #196) - More AI for statistics in R (Ed H) :: [slides](https://www.canva.com/design/DAG6WOkzGQA/PiuadorbJINPZzlpEZScRQ/edit?utm_content=DAG6WOkzGQA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) :: [car data](https://www.kaggle.com/datasets/hellbuoy/car-price-prediction) :: [files](https://github.com/HADataClub/website/tree/main/files/2025-12-02)
 
 [![](img/youtube.svg){width="40"} video](https://youtu.be/HMfhV0uK4Ws) 2025-11-25 (Meeting #195) - Effect size extraction from the literature (example in animal behaviour) (Ed H) :: [slides](https://www.canva.com/design/DAG5sxRpCXs/mpNpt9G1wWqrtHWC_mfzhg/edit?utm_content=DAG5sxRpCXs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) :: [files](https://github.com/HADataClub/website/tree/main/files/2025-11-25)
 
