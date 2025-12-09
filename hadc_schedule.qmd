@@ -25,7 +25,7 @@ title: "Schedule"
 
 ### Meeting materials
 
-[![](img/youtube.svg){width="40"} video]() 2025-12-09 (Meeting #197) - Visualising survey data in R (if you like Likert) (Ed H) :: [slides]() :: [car data]() :: [files](https://github.com/HADataClub/website/tree/main/files/2025-12-09)
+[![](img/youtube.svg){width="40"} video]() 2025-12-09 (Meeting #197) - Visualising survey data in R (if you like Likert) (Ed H) :: [slides](https://www.canva.com/design/DAG7BdgtUJs/S1R69-7pSf0nsxuTXrEzJQ/edit?utm_content=DAG7BdgtUJs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) :: [files](https://github.com/HADataClub/website/tree/main/files/2025-12-09)
 
 [![](img/youtube.svg){width="40"} video](https://youtu.be/MdY0QEBQvRY) 2025-12-02 (Meeting #196) - More AI for statistics in R (Ed H) :: [slides](https://www.canva.com/design/DAG6WOkzGQA/PiuadorbJINPZzlpEZScRQ/edit?utm_content=DAG6WOkzGQA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) :: [car data](https://www.kaggle.com/datasets/hellbuoy/car-price-prediction) :: [files](https://github.com/HADataClub/website/tree/main/files/2025-12-02)
 
