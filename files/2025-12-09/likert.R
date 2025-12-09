@@ -95,6 +95,91 @@ gglikert( # Alter labels
 
 gglikert(df, y_label_wrap = 20) # label wrapping
 
+gglikert(df, y_label_wrap = 200)
+
+### Customise centre ####
+
+# cutoff controls how many categories are considered "negative"
+gglikert(df, cutoff = 0)
+gglikert(df, cutoff = 1)
+gglikert(df, cutoff = 1.25) # first and 1/4 of second are neg
+gglikert(df, cutoff = 1.75) # NB only affects centreing (spp?)
+gglikert(df, cutoff = 3)
+gglikert(df, cutoff = 5)
+
+### X axis symmetry ####
+gglikert(df, cutoff = 1)
+gglikert(df, cutoff = 1, symmetric = TRUE)
+
+### Customise on certain values ####
+gglikert(df_dk)
+
+# Convert Don't Know to NA
+df_dk |>
+  mutate(across(everything(), ~ factor(.x, levels = likert_levels))) |>
+  gglikert()
+
+# Exclude fill values but still use for proportion
+df_dk |> gglikert(exclude_fill_values = "Don't know")
+
+
+### Facets OMG! ####
+# Simulate some groups for grouping
+df_group <- df
+df_group$group1 <- sample(c("A", "B"), 150, replace = TRUE)
+df_group$group2 <- sample(c("a", "b", "c"), 150, replace = TRUE)
+
+gglikert(df_group,
+         q1:q6,
+         facet_cols = vars(group1),
+         labels_size = 3
+)
+
+# By 2 groups 
+gglikert(df_group,
+         q1:q2,
+         facet_rows = vars(group1, group2),
+         labels_size = 3
+)
+
+# Go completely crazy
+gglikert(df_group,
+         q3:q6,
+         facet_cols = vars(group1),
+         facet_rows = vars(group2),
+         labels_size = 3
+) +
+  scale_x_continuous(
+    labels = label_percent_abs(),
+    expand = expansion(0, .2)
+  )
+
+### Stacked Bar Plot (classic... or old fashioned) ####
+gglikert_stacked(df)
+
+gglikert_stacked( # Customise
+  df,
+  sort = "asc",
+  add_median_line = TRUE,
+  add_labels = FALSE
+)
+
+# With facets
+gglikert_stacked(
+  df_group,
+  include = q1:q4,
+  y = "group2"
+) +
+  facet_grid(
+    rows = vars(.question),
+    labeller = label_wrap_gen(15)
+  )
+
+### weighting data (moderately advanced) ####
+
+# simulate some weights 
+df$sampling_weights <- runif(nrow(df))
+gglikert(df, q1:q4, weights = sampling_weights)
 
 
 ## 04 References ####
