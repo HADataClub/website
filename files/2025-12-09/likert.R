@@ -182,6 +182,14 @@ df$sampling_weights <- runif(nrow(df))
 gglikert(df, q1:q4, weights = sampling_weights)
 
 
+### Long data for stacked barplots ####
+gglikert_data(df) |>
+  head()
+
+ggplot(gglikert_data(df[, 1:6])) +
+  aes(y = .question, fill = .answer) +
+  geom_bar(position = "fill")
+
 ## 04 References ####
 
 # Vignette
