@@ -8,9 +8,11 @@ HADC! 2025-12-16
 
 **Notes**
 
-* Read the Sam 3 readme page and do not forget to follow the instruction about requesting access to the Hugging Face assets >> [Huggingface Instructions](https://huggingface.co/docs/huggingface_hub/en/quick-start#authentication)
+* Read the Sam 3 Github README page and do not forget to follow the instruction about requesting access to the Hugging Face assets >> [Huggingface Instructions](https://huggingface.co/docs/huggingface_hub/en/quick-start#authentication)
 
 * If using Colab the Hugging Face secret variable option is pretty good...
+
+* Finally, you need to request access on Huggingface [here](https://huggingface.co/facebook/sam3)
 
 * An easy way to open a notebook in colab is to copy the link, ctrl+o, then search for it and open e.g. https://github.com/facebookresearch/sam3
 
