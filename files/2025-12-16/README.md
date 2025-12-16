@@ -6,7 +6,19 @@ HADC! 2025-12-16
 
 [Sam 3 Github repo](https://github.com/facebookresearch/sam3)
 
-**NB the easiest way to run the notebooks below is to drag them into your Google Drive, right click, then choose Open With > Google Colaboratory**
+**Notes**
+
+* Read the Sam 3 readme page and do not forget to follow the instruction about requesting access to the Hugging Face assets >> [Huggingface Instructions](https://huggingface.co/docs/huggingface_hub/en/quick-start#authentication)
+
+* If using Colab the Hugging Face secret variable option is pretty good...
+
+* An easy way to open a notebook in colab is to copy the link, ctrl+o, then search for it and open e.g. https://github.com/facebookresearch/sam3
+
+
+* Another way to run the notebooks below is to drag them into your Google Drive, right click, then choose Open With > Google Colaboratory
+
+* If using Colab change runtime type to enable GPU
+
 
 ## Sam 3 demonstration notebooks
 
