@@ -46,7 +46,7 @@ website:
     image: "images/twitter-card.png"
 
   page-footer:
-    left: "&copy; 2025 🐊 [W. Edwin Harris](https://weharris.me)"
+    left: "&copy; 2026 🐊 [W. Edwin Harris](https://weharris.me)"
     center: "📊 [The Statistics Lab](https://thestatisticslab.com)"
     right: "🚀 Built with [Quarto](https://quarto.org/)."
     background: "#D9E3E4"
