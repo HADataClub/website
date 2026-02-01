@@ -23,7 +23,7 @@ TBD
 
 ### Meeting materials
 
-[![](img/youtube.svg){width="40"} video]() 2026-01-13 (Meeting #199) - Build your project Data Analysis Plan (Ed H) :: [slides](https://www.canva.com/design/DAG-HBAn2xE/ashR_DtUlqadTq64LeDsSA/edit?utm_content=DAG-HBAn2xE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) :: [DAP template file](https://github.com/weharris/templates-cheatsheets/blob/main/Templates/data-analysis-plan/template-data-analysis-plan.qmd) :: [DAP example file](https://github.com/weharris/templates-cheatsheets/blob/main/Templates/data-analysis-plan/DAP-example.qmd)
+[![](img/youtube.svg){width="40"} video](https://youtu.be/ERXk5AEEvro) 2026-01-13 (Meeting #199) - Build your project Data Analysis Plan (Ed H) :: [slides](https://www.canva.com/design/DAG-HBAn2xE/ashR_DtUlqadTq64LeDsSA/edit?utm_content=DAG-HBAn2xE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) :: [DAP template file](https://github.com/weharris/templates-cheatsheets/blob/main/Templates/data-analysis-plan/template-data-analysis-plan.qmd) :: [DAP example file](https://github.com/weharris/templates-cheatsheets/blob/main/Templates/data-analysis-plan/DAP-example.qmd)
 
 [![](img/youtube.svg){width="40"} video](https://youtu.be/8to0gU_O5gY) 2025-12-16 (Meeting #198) - Exploring SAM3 the latest (transformer) computer vision classification AI model from Meta (Ed H) :: [slides](https://www.canva.com/design/DAG7pwzUPHc/iK5dBLHSaBEHyChZN6xmlg/edit?utm_content=DAG7pwzUPHc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) :: [files](https://github.com/HADataClub/website/tree/main/files/2025-12-16) :: [SAM3 Github repo](https://github.com/facebookresearch/sam3)
 
